@@ -1,0 +1,11 @@
+### Passo a passo:
+1 - quadrado com as cores (4); [ ]
+2 - aleatoriamente, uma das cores pisca (acende/desliga); [ ]
+3 - clicar em uma das cores; [ ]
+4 - se errar, jogo acaba; [ ]
+5 - se acertar, uma nova cor aleatoria acende; [ ]
+6 - se errar, jogo acaba; [ ]
+7 - se acertar, +1 nova cor; [  ]
+
+
+https://web.dio.me/lab/criando-seu-jogo-de-memoria-estilo-genius/learning/16120f2b-629b-4fd5-b69b-ee8e4f5f1ff4?back=/play
