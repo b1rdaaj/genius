@@ -28,11 +28,20 @@ body {
     background-color: green;
     border-top-left-radius: 100%;
 }   
+.green:hover {
+    background-color: #90ee90;
+    cursor: pointer;
+}
 
 .red {
     grid-area: red;
     background-color: red;
     border-top-right-radius: 100%;
+}
+
+.red:hover {
+    background-color: #e95858;
+    cursor: pointer;
 }
 
 .blue {
@@ -41,14 +50,24 @@ body {
     border-bottom-left-radius: 100%;
 }
 
+.blue:hover {
+    background-color: #5c6fe7;
+    cursor: pointer;
+}
+
 .yellow {
     grid-area: yellow;
     background-color: yellow;
     border-bottom-right-radius: 100%;
 }
 
+.yellow:hover {
+    background-color: #edea92;
+    cursor: pointer;
+}
+
 .selected {
-    opacity: 0.8
+    opacity: 0.8;
     box-shadow: 0 0 20px white;
     transition: all 0.2s;
 }
