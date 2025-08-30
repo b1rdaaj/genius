@@ -29,22 +29,22 @@ let lightColor = (element, number) => {
    number = number *500;
     setTimeout(() => {
         element.classList.add('selected');
-    }, number - 250);
+    }, number - 350);
     setTimeout(() => {
         element.classList.remove('selected');
-    });
+    }, number);
 }
 
 //checa se os botoes clicados são os mesmos da ordem do jogo
 let checkOrder = () => {
-    for (let i in order) {
+    for (let i = 0; i < clickedOrder.length; i++){ 
         if(clickedOrder[i] != order[i]){
             gameOver();
-            break;
+            return;
         }
     }
     if(clickedOrder.length == order.length){
-        alert(`Pontuação: ${score}\nVocê acertou!\nIniciando próximo nível.`);
+        //alert(`Pontuação: ${score}\nVocê acertou!\nIniciando próximo nível.`);
         nextLevel();
     }
 }
@@ -57,7 +57,8 @@ let click = (color) => {
     setTimeout(() => {
         createColorElement(color).classList.remove('selected');
         checkOrder();
-    }, 250);
+    }, 700);
+    
 }
 
 //função que retorna a cor
@@ -89,15 +90,14 @@ let gameOver = () => {
 }
 
 let playGame = () => {
-    alert('Bem-vindo ao Genius, Iniciando novo jogo!');
+    alert('Bem-vindo ao Genius, iniciando novo jogo!');
     score = 0;   
 
     nextLevel();
 }
-
-green.addEventListener('click', click(0));
-red.addEventListener('click', click(1));
-blue.addEventListener('click', click(2));
-yellow.addEventListener('click', click(3));
+    green.addEventListener('click',() => click(0));
+    red.addEventListener('click',() => click(1));
+    blue.addEventListener('click',() => click(2));
+    yellow.addEventListener('click',() => click(3));
 
 playGame();
